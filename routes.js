@@ -8,3 +8,8 @@ router.get('/', (req, res) => {
 
   res.send('Hello mealPoll team!')
 })
+
+router.get('/poll', (req, res) => {
+
+  res.render('poll', data)
+})
