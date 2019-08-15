@@ -1,17 +1,13 @@
 body {
-  background-color: #70abaf
+  background-color: #99e1d9
 }
-
 
 header { 
   display: block;
   text-align: center;
   font-family: 'Maven Pro', sans-serif;
   font-size: 45px;
-  border: 2px;
-  border-style: solid;
-  border-color: black;
-  background-color: #99e1d9
+  background-color: #70abaf
 }
 
 figure {
@@ -22,6 +18,7 @@ footer {
   text-align: center;
   clear: left;
   margin: 20px;
+  background-color: #70abaf
 }
 
 h1 {
@@ -62,7 +59,14 @@ table, th, td {
   border-style: solid;
   border-color: black;
   border-width: 2px;
+}
 
+.headingborder {
+  margin: 10px 10px 10px 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  background-color: #70abaf
 }
 
 .button {
@@ -97,6 +101,7 @@ table, th, td {
 /* right column */
 .column.right {
     width: 20%;
+    background-color: #f0f7f4;
 }
 
 .results-image {
@@ -104,4 +109,11 @@ table, th, td {
   object-fit: cover;
   width: 230px;
   height: 230px;
+}
+
+#homeicon {
+  align-content: left;
+  padding-left: 30;
+  padding-top: 10;
+  background-color: #70abaf
 }
