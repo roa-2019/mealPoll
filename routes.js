@@ -15,13 +15,6 @@ router.get('/poll', (req, res) => {
 })
 
 router.post('/poll', (req, res) => {
-  // fs.readFile('./data.json', 'utf8', function (err,data)) {
-  //   if (err) {
-  //     return res.status(500).send('An Error Occured!')
-  //   }
-
-  //   var meals = JSON.parse(data)
-
 
   var keys = Object.keys(req.body)
 
@@ -34,10 +27,6 @@ router.post('/poll', (req, res) => {
     }
   }
 
-  // }
-
-
-
   fs.writeFile('./data.json', JSON.stringify(data), function (err) {
     if (err) {
       return res.status(500).send('An Error Occured!')
@@ -45,9 +34,6 @@ router.post('/poll', (req, res) => {
     res.render('results', data)
   })
 })
-
-
-
 
 
 //--------------

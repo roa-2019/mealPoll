@@ -8,17 +8,12 @@
         {
             "id": 2,
             "name": "Curry",
-            "voters": [
-                "Noemie"
-            ]
+            "voters": []
         },
         {
             "id": 3,
             "name": "Salad",
-            "voters": [
-                "Noemie"
-            ]
+            "voters": []
         }
     ],
     "_locals": {}
-}
