@@ -1,0 +1,36 @@
+{
+  "name": "mealPoll",
+  "version": "1.0.0",
+  "description": "Meal Polling App",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon --inspect index --ignore data.json",
+    "test": "jest --watchAll --noStackTrace",
+    "start": "node index.js"
+  },
+  "homepage": "https://github.com/roa-2019/mealPoll#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roa-2019/mealPoll.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roa-2019/mealPoll/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.2"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "data.json"
+    ]
+  }
+}
