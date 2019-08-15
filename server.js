@@ -5,8 +5,6 @@ const routes = require('./routes')
 
 const server = express()
 
-const port = process.env.PORT || 3000
-
 
 // Middleware
 server.engine('hbs', hbs({
