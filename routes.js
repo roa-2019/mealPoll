@@ -13,3 +13,8 @@ router.get('/poll', (req, res) => {
 
   res.render('poll', data)
 })
+
+router.post('/poll', (req,res) => {
+
+  res.render('results', data)
+})
