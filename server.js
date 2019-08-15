@@ -1,7 +1,7 @@
 const express = require('express')
 const hbs = require('express-handlebars')
 const routes = require('./routes')
-// const puppies = require('./data.json')
+const meals = require('./data.json')
 
 const server = express()
 
