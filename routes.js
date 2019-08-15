@@ -9,3 +9,9 @@ router.get('/', (req, res) => {
   res.send('Hello mealPoll team!')
 })
 
+//--------------
+//Results Page
+//--------------
+router.get('/results',(req, res) => {
+  res.render('views/results')
+})
