@@ -1,0 +1,19 @@
+{
+    "meals": [
+        {
+            "id": 1,
+            "name": "Soup",
+            "voters": ["July", "Noemie"]
+        },
+        {
+            "id": 2,
+            "name": "Curry",
+            "voters": ["Alex", "Noemie"]
+        },
+        {
+            "id": 3,
+            "name": "Salad",
+            "voters": ["July", "Alex", "Noemie"]
+        },
+    ]
+}
