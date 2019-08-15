@@ -1,5 +1,17 @@
 body {
-  background-color: lightcyan;
+  background-color: #70abaf
+}
+
+
+header { 
+  display: block;
+  text-align: center;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 45px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background-color: #99e1d9
 }
 
 figure {
@@ -54,7 +66,7 @@ table, th, td {
 }
 
 .button {
-  background-color: lightcyan;
+  background-color: #99e1d9;
   border-color: black;
   border-style: solid;
   border-radius: 6px;
@@ -66,3 +78,23 @@ table, th, td {
   font: 16px;
 }
 
+.column {
+  float: left;
+}
+
+/* Left column */
+.column.left {
+  width: 20%;
+  background-color: #99e1d9
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+  background-color: #f0f7f4;
+}
+
+/* right column */
+.column.right {
+    width: 20%;
+}
