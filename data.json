@@ -3,17 +3,17 @@
         {
             "id": 1,
             "name": "Soup",
-            "voters": ["July", "Noemie"]
+            "voters": []
         },
         {
             "id": 2,
             "name": "Curry",
-            "voters": ["Alex", "Noemie"]
+            "voters": []
         },
         {
             "id": 3,
             "name": "Salad",
-            "voters": ["July", "Alex", "Noemie"]
+            "voters": []
         }
     ]
 }
