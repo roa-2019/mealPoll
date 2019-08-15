@@ -13,5 +13,5 @@ router.get('/', (req, res) => {
 //Results Page
 //--------------
 router.get('/results',(req, res) => {
-  res.render('views/results')
+  res.render('results', data)
 })
