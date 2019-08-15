@@ -14,20 +14,36 @@ router.get('/poll', (req, res) => {
   res.render('poll', data)
 })
 
-router.post('/poll', (req,res) => {
+router.post('/poll', (req, res) => {
+  // fs.readFile('./data.json', 'utf8', function (err,data)) {
+  //   if (err) {
+  //     return res.status(500).send('An Error Occured!')
+  //   }
+
+  //   var meals = JSON.parse(data)
+
+
   var keys = Object.keys(req.body)
-  
+
   for (let i = 0; i < data.meals.length; i++) {
     var chosenMeal = keys.find(key => key == data.meals[i].name)
 
-    if(chosenMeal) {
+    if (chosenMeal) {
       var voters = data.meals[i].voters
       voters.push(req.body.name)
     }
   }
-  
-  // fs.writeFile('./data.json', JSON.stringify(data),)q
-  res.render('results', data)
+
+  // }
+
+
+
+  fs.writeFile('./data.json', JSON.stringify(data), function (err) {
+    if (err) {
+      return res.status(500).send('An Error Occured!')
+    }
+    res.render('results', data)
+  })
 })
 
 
@@ -37,6 +53,6 @@ router.post('/poll', (req,res) => {
 //--------------
 //Results Page
 //--------------
-router.get('/results',(req, res) => {
+router.get('/results', (req, res) => {
   res.render('results', data)
 })
