@@ -1,13 +1,13 @@
-<form class="form" action="" method="post"> 
+<form class="form" action="/polls" method="post">
     <label for="name" class="form-item">
         Name:
         <input type="text" name="name" value="">
 
     </label>
+    <p>Choose the meals you like:</p>
     {{#each meals}}
-    <li> <a href=" "> </a> 
-    </li>
-
-
-
+        <input type="checkbox" id={{id}} name={{name}}>
+            <label for={{name}}>{{name}}</label>
+    {{/each}}
+    <input type="submit" name="" value="Vote">
 </form>
