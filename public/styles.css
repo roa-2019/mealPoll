@@ -98,3 +98,10 @@ table, th, td {
 .column.right {
     width: 20%;
 }
+
+.results-image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+}
