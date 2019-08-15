@@ -7,8 +7,8 @@
       {{#each meals}}
       <h3>{{name}}</h3>
       <h3>Votes:{{voters.length}}</h3>      
-        <p>Voters:{{#each voters}}
-          {{this}}
+        <p class="voters-list">Voters:{{#each voters}}
+         {{this}}<span>,</span>
           {{/each}}
         </p>
       {{/each}}
