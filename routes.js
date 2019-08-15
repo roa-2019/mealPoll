@@ -15,8 +15,23 @@ router.get('/poll', (req, res) => {
 })
 
 router.post('/poll', (req,res) => {
+  var keys = Object.keys(req.body)
+  
+  for (let i = 0; i < data.meals.length; i++) {
+    var chosenMeal = keys.find(key => key == data.meals[i].name)
+
+    if(chosenMeal) {
+      var voters = data.meals[i].voters
+      voters.push(req.body.name)
+    }
+  }
+  
+  // fs.writeFile('./data.json', JSON.stringify(data),)q
   res.render('results', data)
 })
+
+
+
 
 
 //--------------
