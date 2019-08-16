@@ -1,17 +1,14 @@
-<section id="results">
-  <div class="results-wrapper">
-    <div class="results-image">
-      <img src="{{resultsImage}}" alt="poll results image">
-    </div>
-    <div class="results-text">
-      {{#each meals}}
-      <h3>{{name}}</h3>
-      <h3>Votes:{{voters.length}}</h3>      
+
+{{#each meals}}
+    <div class="item">
+      <img class="results-image" src="{{image}}" alt="poll results image">
+      <div class="results-text">
+        <h3>{{name}}</h3>
+        <h3>Votes:{{voters.length}}</h3>      
         <p class="voters-list">Voters:{{#each voters}}
-         {{this}}<span>,</span>
+        {{this}}<span>,</span>
           {{/each}}
         </p>
-      {{/each}}
+      </div>
     </div>
-  </div>
-</section>
+{{/each}}
