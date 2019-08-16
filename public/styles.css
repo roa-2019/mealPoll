@@ -115,6 +115,9 @@ table, th, td {
 .column.middle {
   width: 60%;
   background-color: #f0f7f4;
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  flex-shrink: 1;
 }
 
 /* right column */
@@ -137,10 +140,4 @@ table, th, td {
   padding-left: 30;
   padding-top: 10;
   background-color: #70abaf
-}
-
-.container {
-  display: flex; /* or inline-flex */
-  flex-direction: row;
-  flex-shrink: 1;
 }
