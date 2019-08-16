@@ -132,3 +132,9 @@ table, th, td {
   padding-top: 10;
   background-color: #70abaf
 }
+
+.container {
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  flex-shrink: 1;
+}
