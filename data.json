@@ -3,12 +3,12 @@
         {
             "id": 1,
             "name": "Soup",
-            "voters": ["a", "b","v"]
+            "voters": []
         },
         {
             "id": 2,
             "name": "Curry",
-            "voters": ["Sam", "Alex", "George", "Charles"]
+            "voters": []
         },
         {
             "id": 3,
@@ -17,3 +17,4 @@
         }
     ],
     "_locals": {}
+}
