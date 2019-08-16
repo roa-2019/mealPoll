@@ -4,15 +4,6 @@
             "id": 1,
             "name": "Soup",
             "voters": [
-                "Bob",
-                "Coco",
-                "Coco",
-                "Bananas",
-                "Bananas",
-                "Bananas",
-                "Bananas",
-                "Bananas",
-                "Bananas"
             ],
             "image": "/images/soup.png"
         },
@@ -20,9 +11,7 @@
             "id": 2,
             "name": "Curry",
             "voters": [
-                "Bob",
-                "Coco",
-                "Coco"
+
             ],
             "image": "/images/curry.png"
         },
@@ -30,16 +19,9 @@
             "id": 3,
             "name": "Salad",
             "voters": [
-                "Bob",
-                "Bananas",
-                "Bananas",
-                "Bananas",
-                "Bananas",
-                "Bananas",
-                "Bananas"
-            ],
+        ],
             "image": "/images/salad.png"
         }
-    ],
-    "_locals": {}
+    ]
+   
 }
