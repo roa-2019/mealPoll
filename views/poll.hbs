@@ -5,9 +5,16 @@
 
     </label>
     <p>Choose the meals you like:</p>
+
+<div class= "pollContainer"> 
     {{#each meals}}
-        <input type="checkbox" id={{id}} name={{name}}>
-            <label for={{name}}>{{name}}</label>
+    <div class ="item"> 
+       <img class = "results-image" src="{{image}}" alt = "meal image"> 
+        <input class="checkbox" type="radio" id={{id}} name={{name}}>
+           <h3><label for={{name}}>{{name}}</label></h3> 
+    </div>
     {{/each}}
+</div>
+
     <input type="submit" name="" value="Vote">
 </form>
