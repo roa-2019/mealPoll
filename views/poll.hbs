@@ -1,20 +1,20 @@
 <form class="form" action="/poll" method="post">
     <label for="name" class="form-item" >
-        Name:
-        <input type="text" name="name" value="" required>
-
+       <p><h3> Name:</h3><input type="text" name="name" value="" required></p>        
     </label>
-    <p>Choose the meals you like:</p>
 
-<div class= "pollContainer"> 
-    {{#each meals}}
-    <div class ="item"> 
-       <img class = "results-image" src="{{image}}" alt = "meal image"> 
-        <input class="checkbox" type="radio" id={{id}} name={{name}}>
-           <h3><label for={{name}}>{{name}}</label></h3> 
+    <h2>Choose the meals you like:</h2>
+
+    <div class= "pollContainer"> 
+        {{#each meals}}
+        <div class ="item"> 
+        <img class = "results-image" src="{{image}}" alt = "meal image"> 
+            <input class="checkbox" type="radio" id={{id}} name={{name}}>
+            <h3><label for={{name}}>{{name}}</label></h3> 
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
-</div>
 
     <input type="submit" name="" value="Vote">
+    
 </form>
