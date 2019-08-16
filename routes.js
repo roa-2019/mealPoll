@@ -23,7 +23,10 @@ router.post('/poll', (req, res) => {
 
     if (chosenMeal) {
       var voters = data.meals[i].voters
-      voters.push(req.body.name)
+      var asVoted = voters.find(voter => voter == req.body.name)
+      if(!asVoted) {
+        voters.push(req.body.name)
+      }
     }
   }
 
