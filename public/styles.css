@@ -116,16 +116,16 @@ table, th, td {
   display: flex; /* or inline-flex */
   flex-direction: row;
   flex-shrink: 1;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 /* flexbox that contains the voting section */
 .pollContainer{
-  width: 70%;
+  width: 90%;
   background-color: #f0f7f4;
   display: flex; /* or inline-flex */
   flex-direction: row;
   flex-shrink: 1;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 /* right column */
