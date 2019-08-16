@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
   res.render('home')
 })
 
+//--------------
+//Poll Page
+//--------------
+
 router.get('/poll', (req, res) => {
 
   res.render('poll', data)
@@ -47,8 +51,7 @@ router.get('/results', (req, res) => {
 })
 
 router.post('/results', (req, res) => {
-  console.log('it works!')
- 
+
   for (let i = 0; i < data.meals.length; i++) {
     data.meals[i].voters = [];
   }
@@ -59,5 +62,12 @@ router.post('/results', (req, res) => {
     }
     res.render('results', data)
   })
+})
 
+//--------------
+//Add meal Page
+//--------------
+
+router.get('/add-meal', (req, res) => {
+    res.render('add-meal', data)
 })
