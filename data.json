@@ -3,17 +3,21 @@
         {
             "id": 1,
             "name": "Soup",
-            "voters": ["a", "b","v"]
+            "voters": [],
+            "image" : "/images/soup.png"
         },
         {
             "id": 2,
             "name": "Curry",
-            "voters": ["Sam", "Alex", "George", "Charles"]
+            "voters": [],
+            "image" : "/images/curry.png"
+
         },
         {
             "id": 3,
             "name": "Salad",
-            "voters": []
+            "voters": [],
+            "image" : "/images/salad.png"
         }
-    ],
-    "_locals": {}
+    ]
+}
