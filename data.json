@@ -16,8 +16,14 @@
         {
             "id": 3,
             "name": "Salad",
-            "voters": [],
-            "image" : "/images/salad.png"
+            "voters": [
+                "Linh",
+                "gee",
+                "Bubbles",
+                "Will"
+            ],
+            "image": "/images/salad.png"
         }
-    ]
+    ],
+    "_locals": {}
 }
