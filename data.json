@@ -3,26 +3,15 @@
         {
             "id": 1,
             "name": "Soup",
-            "voters": [
-                "",
-                "Linh",
-                "Will",
-                "Bubbles"
-            ],
-            "image": "/images/soup.png"
+            "voters": [],
+            "image" : "/images/soup.png"
         },
         {
             "id": 2,
             "name": "Curry",
-            "voters": [
-                "",
-                "Bubbles",
-                "",
-                "",
-                "gee",
-                "Will"
-            ],
-            "image": "/images/curry.png"
+            "voters": [],
+            "image" : "/images/curry.png"
+
         },
         {
             "id": 3,
