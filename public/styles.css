@@ -188,10 +188,14 @@ input[type=text]{
 }
 
 input[type=submit]{
-  width: 100px;
+  width: 10em;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   font-size: 20px;
   background-color:  #70abaf;
+}
+
+#slogan {
+  font-size: 35px;
 }

@@ -1,5 +1,7 @@
-<h2>The People Have Spoketh!</h2>
+<div class="form">
+<h1 id="slogan">The People Have Spoketh!</h1>
 
+<div class= "pollContainer"> 
 {{#each meals}}
     <div class="item">
       <img class="results-image" src="{{image}}" alt="poll results image">
@@ -13,6 +15,8 @@
       </div>
     </div>
 {{/each}}
+</div>
 <form class="form" action="/results" method="post">
   <input type="submit" id = "reset" value="Reset poll">
 </form>
+</div>
