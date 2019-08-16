@@ -3,21 +3,43 @@
         {
             "id": 1,
             "name": "Soup",
-            "voters": [],
-            "image" : "/images/soup.png"
+            "voters": [
+                "Bob",
+                "Coco",
+                "Coco",
+                "Bananas",
+                "Bananas",
+                "Bananas",
+                "Bananas",
+                "Bananas",
+                "Bananas"
+            ],
+            "image": "/images/soup.png"
         },
         {
             "id": 2,
             "name": "Curry",
-            "voters": [],
-            "image" : "/images/curry.png"
-
+            "voters": [
+                "Bob",
+                "Coco",
+                "Coco"
+            ],
+            "image": "/images/curry.png"
         },
         {
             "id": 3,
             "name": "Salad",
-            "voters": [],
-            "image" : "/images/salad.png"
+            "voters": [
+                "Bob",
+                "Bananas",
+                "Bananas",
+                "Bananas",
+                "Bananas",
+                "Bananas",
+                "Bananas"
+            ],
+            "image": "/images/salad.png"
         }
-    ]
+    ],
+    "_locals": {}
 }
