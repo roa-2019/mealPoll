@@ -3,12 +3,13 @@
         {
             "id": 1,
             "name": "Soup",
-            "voters": [],
+            "voters": []
             "image" : "/images/soup.png"
         },
         {
             "id": 2,
             "name": "Curry",
+            "voters": []
             "voters": [],
             "image" : "/images/curry.png"
 
