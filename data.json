@@ -4,24 +4,18 @@
             "id": 1,
             "name": "Soup",
             "voters": [],
-            "image" : "/images/soup.png"
+            "image": "/images/soup.png"
         },
         {
             "id": 2,
             "name": "Curry",
             "voters": [],
-            "image" : "/images/curry.png"
-
+            "image": "/images/curry.png"
         },
         {
             "id": 3,
             "name": "Salad",
-            "voters": [
-                "Linh",
-                "gee",
-                "Bubbles",
-                "Will"
-            ],
+            "voters": [],
             "image": "/images/salad.png"
         }
     ],

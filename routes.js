@@ -45,3 +45,19 @@ router.post('/poll', (req, res) => {
 router.get('/results', (req, res) => {
   res.render('results', data)
 })
+
+router.post('/results', (req, res) => {
+  console.log('it works!')
+ 
+  for (let i = 0; i < data.meals.length; i++) {
+    data.meals[i].voters = [];
+  }
+    
+  fs.writeFile('./data.json', JSON.stringify(data), function (err) {
+    if (err) {
+      return res.status(500).send('An Error Occured!')
+    }
+    res.render('results', data)
+  })
+
+})
