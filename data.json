@@ -4,17 +4,21 @@
             "id": 1,
             "name": "Soup",
             "voters": []
+            "image" : "/images/soup.png"
         },
         {
             "id": 2,
             "name": "Curry",
             "voters": []
+            "voters": [],
+            "image" : "/images/curry.png"
+
         },
         {
             "id": 3,
             "name": "Salad",
-            "voters": []
+            "voters": [],
+            "image" : "/images/salad.png"
         }
-    ],
-    "_locals": {}
+    ]
 }
