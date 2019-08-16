@@ -1,5 +1,6 @@
 body {
-  background-color: #99e1d9
+  background-color: #99e1d9;
+  color: #32292f;
 }
 
 header { 
@@ -18,8 +19,7 @@ footer {
   text-align: center;
   clear: left;
   margin: 20px;
-  background-color: #70abaf;
-  
+  background-color: #99e1d9;
   width: 100%;
 }
 
@@ -56,7 +56,7 @@ p {
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #32292f;
   border-collapse: collapse;
   padding: 5px;
   text-align: center;
@@ -65,21 +65,21 @@ table, th, td {
 .border {
   margin: 10px 10px 10px 0px;
   border-style: solid;
-  border-color: black;
+  border-color:#32292f;
   border-width: 2px;
 }
 
 .headingborder {
   margin: 10px 10px 10px 0px;
   border-style: solid;
-  border-color: black;
+  border-color: #32292f;
   border-width: 2px;
   background-color: #70abaf
 }
 
 .button {
   background-color: #99e1d9;
-  border-color: black;
+  border-color: #32292f;
   border-style: solid;
   border-radius: 6px;
   border-width: 2px;
@@ -117,7 +117,16 @@ table, th, td {
   display: flex; /* or inline-flex */
   flex-direction: row;
   flex-shrink: 1;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+/* flexbox that contains the voting section */
+.pollContainer{
+  width: 90%;
+  background-color: #f0f7f4;
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  flex-shrink: 1;
+  justify-content: space-evenly;
 }
 
 /* right column */
@@ -138,7 +147,16 @@ table, th, td {
   object-fit: cover;
   width: 230px;
   height: 230px;
+  padding: 1px 1px 15px 1px; 
   
+}
+
+.form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 15px 15px 15px;
 }
 
 .item {
@@ -153,4 +171,27 @@ table, th, td {
   padding-left: 30;
   padding-top: 10;
   background-color: #70abaf
+}
+
+.checkbox{
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+input[type=submit]{
+  width: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color:  #70abaf;
 }
