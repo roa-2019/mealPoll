@@ -1,1 +1,40 @@
-{"meals":[{"id":1,"name":"Soup","voters":["","Linh","Will"],"image":"/images/soup.png"},{"id":2,"name":"Curry","voters":["","Bubbles","",""],"image":"/images/curry.png"},{"id":3,"name":"Salad","voters":["Linh"],"image":"/images/salad.png"}],"_locals":{}}
+{
+    "meals": [
+        {
+            "id": 1,
+            "name": "Soup",
+            "voters": [
+                "",
+                "Linh",
+                "Will",
+                "Bubbles"
+            ],
+            "image": "/images/soup.png"
+        },
+        {
+            "id": 2,
+            "name": "Curry",
+            "voters": [
+                "",
+                "Bubbles",
+                "",
+                "",
+                "gee",
+                "Will"
+            ],
+            "image": "/images/curry.png"
+        },
+        {
+            "id": 3,
+            "name": "Salad",
+            "voters": [
+                "Linh",
+                "gee",
+                "Bubbles",
+                "Will"
+            ],
+            "image": "/images/salad.png"
+        }
+    ],
+    "_locals": {}
+}
