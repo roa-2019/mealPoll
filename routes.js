@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const fileUpload = require('express-fileupload')
 const data = require('./data.json')
 const fs = require('fs')
 module.exports = router
@@ -8,6 +9,10 @@ router.get('/', (req, res) => {
 
   res.render('home')
 })
+
+//--------------
+//Poll Page
+//--------------
 
 router.get('/poll', (req, res) => {
 
@@ -47,8 +52,7 @@ router.get('/results', (req, res) => {
 })
 
 router.post('/results', (req, res) => {
-  console.log('it works!')
- 
+
   for (let i = 0; i < data.meals.length; i++) {
     data.meals[i].voters = [];
   }
@@ -58,6 +62,45 @@ router.post('/results', (req, res) => {
       return res.status(500).send('An Error Occured!')
     }
     res.render('results', data)
+  })
+})
+
+//--------------
+//Add meal Page
+//--------------
+
+router.get('/add-meal', (req, res) => {
+    res.render('add-meal', data)
+})
+
+router.post('/add-meal', (req, res) => {
+
+  if (req.files == null) {
+     return res.status(400).send('No files were uploaded.');
+  }
+
+  let image = req.files.image;
+
+  image.mv(__dirname + '/public/images/' + image.name, function(err) {
+    if (err) {
+       return res.status(500).send(err);
+    }
+  })
+
+  var newDish = {
+    "id": data.meals.length + 1,
+    "name": req.body.name,
+    "voters": [],
+    "image": '/images/' + image.name
+  }
+
+  data.meals.push(newDish)
+  
+  fs.writeFile('./data.json', JSON.stringify(data), function(err) {
+    if(err) {
+      return res.status(500).send('An Error Occured!')
+    }
+    res.render('thanks', data)
   })
 
 })
