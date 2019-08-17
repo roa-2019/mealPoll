@@ -20,8 +20,10 @@
     "url": "https://github.com/roa-2019/mealPoll/issues"
   },
   "dependencies": {
+    "csv-stringify": "^5.3.3",
     "express": "^4.16.4",
     "express-fileupload": "^1.1.5",
+    "express-generator": "^4.16.1",
     "express-handlebars": "^3.1.0"
   },
   "devDependencies": {
