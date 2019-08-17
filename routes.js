@@ -100,7 +100,7 @@ router.post('/add-meal', (req, res) => {
     if(err) {
       return res.status(500).send('An Error Occured!')
     }
-    res.render('add-meal', data)
+    res.render('thanks', data)
   })
 
 })
