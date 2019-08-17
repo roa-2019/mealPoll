@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const fileUpload = require('express-fileupload')
 const data = require('./data.json')
 const fs = require('fs')
+const { Parser } = require('json2csv')
 module.exports = router
 
 router.get('/', (req, res) => {
@@ -51,20 +51,6 @@ router.get('/results', (req, res) => {
   res.render('results', data)
 })
 
-router.post('/results', (req, res) => {
-
-  for (let i = 0; i < data.meals.length; i++) {
-    data.meals[i].voters = [];
-  }
-    
-  fs.writeFile('./data.json', JSON.stringify(data), function (err) {
-    if (err) {
-      return res.status(500).send('An Error Occured!')
-    }
-    res.render('results', data)
-  })
-})
-
 //--------------
 //Add meal Page
 //--------------
@@ -103,4 +89,38 @@ router.post('/add-meal', (req, res) => {
     res.render('thanks', data)
   })
 
+})
+
+//--------------
+//Download results
+//--------------
+
+router.post('/download', (req, res) => {
+  const results = data.meals
+  const fields = ['name', 'voters']
+
+  const json2csvParser = new Parser({fields})
+  const resultsCSV = json2csvParser.parse(results)
+  
+  res.attachment('results.csv');
+  res.send(resultsCSV);
+})
+
+
+//--------------
+//Reset poll
+//--------------
+
+router.post('/reset', (req, res) => {
+
+  for (let i = 0; i < data.meals.length; i++) {
+    data.meals[i].voters = [];
+  }
+    
+  fs.writeFile('./data.json', JSON.stringify(data), function (err) {
+    if (err) {
+      return res.status(500).send('An Error Occured!')
+    }
+    res.render('results', data)
+  })
 })
