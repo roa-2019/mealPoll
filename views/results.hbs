@@ -1,25 +1,25 @@
 <div class="form">
-<h1 id="slogan">The People Have Spoketh!</h1>
+  <h1 id="slogan">The People Have Spoketh!</h1>
 
-<div class= "pollContainer"> 
-{{#each meals}}
+  <div class="pollContainer">
+    {{#each meals}}
     <div class="item">
       <img class="results-image" src="{{image}}" alt="poll results image">
       <div class="results-text">
         <h3>{{name}}</h3>
-        <h3>Votes:{{voters.length}}</h3>      
+        <h3>Votes:{{voters.length}}</h3>
         <p class="voters-list">Voters:{{#each voters}}
-        {{this}}<span>,</span>
+          {{this}}<span>,</span>
           {{/each}}
         </p>
       </div>
     </div>
-{{/each}}
-</div>
-<form class="form" action="/download" method="post">
-  <input type="submit" id="download" value="Download Results">
-</form>
-<form class="form" action="/reset" method="post">
-  <input type="submit" id="reset" value="Reset Poll">
-</form>
+    {{/each}}
+  </div>
+  <form class="form" action="/download" method="post">
+    <input type="submit" id="download" value="Download Results">
+  </form>
+  <form class="form" action="/reset" method="post">
+    <input type="submit" id="reset" value="Reset Poll">
+  </form>
 </div>
