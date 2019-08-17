@@ -71,3 +71,23 @@ router.post('/results', (req, res) => {
 router.get('/add-meal', (req, res) => {
     res.render('add-meal', data)
 })
+
+router.post('/add-meal', (req, res) => {
+
+  var newDish = {
+    "id": data.meals.length + 1,
+    "name": req.body.name,
+    "voters": [],
+    "image": ""
+  }
+
+  data.meals.push(newDish)
+  
+  fs.writeFile('./data.json', JSON.stringify(data), function(err) {
+    if(err) {
+      return res.status(500).send('An Error Occured!')
+    }
+    res.render('add-meal', data)
+  })
+
+})
