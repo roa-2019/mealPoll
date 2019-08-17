@@ -1,10 +1,10 @@
-<form class="form" action="/add-meal" method="post">
+<form class="form" action="/add-meal" method="post" encType="multipart/form-data">
     <h2>Add a new meal option</h2>
     <label for="name" class="form-item" >
        <p><h3> Name:</h3><input type="text" name="name" value="name of the dish" required></p>        
     </label>
-    <label for="name" class="form-item" >
-       <p><h3> Image:</h3><input type="file" name="document" /></p>        
+    <label for="image" class="form-item" >
+       <p><h3> Image:</h3><input type="file" name="image"></p>        
     </label>
     
     <input type="submit" name="" value="Add">

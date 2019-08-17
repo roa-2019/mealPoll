@@ -75,11 +75,23 @@ router.get('/add-meal', (req, res) => {
 
 router.post('/add-meal', (req, res) => {
 
+  if (req.files == null) {
+     return res.status(400).send('No files were uploaded.');
+  }
+
+  let image = req.files.image;
+
+  image.mv(__dirname + '/public/images/' + image.name, function(err) {
+    if (err) {
+       return res.status(500).send(err);
+    }
+  })
+
   var newDish = {
     "id": data.meals.length + 1,
     "name": req.body.name,
     "voters": [],
-    "image": ""
+    "image": '/images/' + image.name
   }
 
   data.meals.push(newDish)
