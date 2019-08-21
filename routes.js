@@ -2,8 +2,11 @@ const express = require('express')
 const router = express.Router()
 const data = require('./data.json')
 const fs = require('fs')
-const { Parser } = require('json2csv')
+// const { Parser } = require('json2csv')
+const json2csv = require('json2csv').parse
+
 module.exports = router
+
 
 router.get('/', (req, res) => {
 
@@ -95,12 +98,13 @@ router.post('/add-meal', (req, res) => {
 //Download results
 //--------------
 
-router.post('/download', (req, res) => {
+router.get('/download', (req, res) => {
   const results = data.meals
   const fields = ['name', 'voters']
 
-  const json2csvParser = new Parser({fields})
-  const resultsCSV = json2csvParser.parse(results)
+  const resultsCSV = json2csv(results, {fields})
+  // const json2csvParser = new Parser({fields})
+  // const resultsCSV = json2csvParser.parse(results)
   
   res.attachment('results.csv');
   res.send(resultsCSV);
